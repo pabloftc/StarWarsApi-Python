@@ -83,7 +83,7 @@ def add_people(people_id):
     return "Added people to favorites", 200
 
 @app.route('/favorite/people/<int:people_id>', methods=['DELETE'])
-def add_people(people_id):
+def delete_people(people_id):
 
     user_id = request.args.get("user_id")
     fav_people = FavoritePeople(user_id, people_id)
@@ -118,7 +118,7 @@ def add_planets(planets_id):
     return "Added planet to favorites", 200
 
 @app.route('/favorite/planets/<int:planets_id>', methods=['DELETE'])
-def add_planets(planets_id):
+def delete_planets(planets_id):
 
     user_id = request.args.get("user_id")
     fav_planets = FavoritePlanets(user_id, planets_id)
